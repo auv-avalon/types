@@ -1,0 +1,14 @@
+<package>
+    <description brief="base types for robotic infrastructures">
+        This software package are header-only definitions of types that are
+        generally useful for algorithms in robotic systems.
+    </description>
+    <author>AUV10</author>
+    <copyright>
+    </copyright>
+    <license></license>
+
+    <depend package="base/types" />
+    <rosdep name="eigen2" />
+    <rosdep name="boost" />
+</package>
