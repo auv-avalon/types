@@ -15,4 +15,27 @@ struct DOFSelection
 
 }
 
+namespace motor_controller
+{
+    struct PIDSettings
+    {
+        double p;
+        double i;
+        double d;
+        double min;
+        double max;
+#ifndef __orogen
+        PIDSettings()
+            : p(0), i(0), d(0), min(0), max(0) {}
+
+        bool operator == (PIDSettings const& other) const
+        { return p == other.p && i == other.i && d == other.d &&
+            min == other.min && max == other.max; }
+        bool operator != (PIDSettings const& other) const
+        { return !(*this == other); }
+#endif
+    };
+
+}
+
 #endif
