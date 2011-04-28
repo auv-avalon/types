@@ -1,9 +1,11 @@
-#ifndef AVAON_TYPE_CONTROL_H__
-#define AVAON_TYPE_CONTROL_H__
+#ifndef AVAON_TYPE_BUOYPOS_
+#define AVAON_TYPE_BUOYPOS_
+
+#include <base/eigen.h>
 
 namespace avalon {
 
-struct buoypos
+struct BuoyPos
 {
 	//position on original image
     	int img_x;
@@ -14,7 +16,8 @@ struct buoypos
 	//probability
 	double p;
 	//worldkoordinates
-	base::Vector2D koord;
+	base::Vector3d koord;
 };
 
 }
+#endif
