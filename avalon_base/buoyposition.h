@@ -17,6 +17,15 @@ struct BuoyPos
 	double p;
 	//worldkoordinates
 	base::Vector3d koord;
+
+	//Konstruktor
+	BuoyPos(int x, int y, int r)
+	{
+		img_x=x;
+		img_y=y;
+		img_r=r;
+		p=1;
+	}
 };
 
 }
