@@ -20,12 +20,7 @@ struct BuoyPos
 
 	//Konstruktor
 	BuoyPos(int x, int y, int r)
-	{
-		img_x=x;
-		img_y=y;
-		img_r=r;
-		p=1;
-	}
+	: img_x(x), img_y(y), img_r(r), p(1) {}
 };
 
 }
