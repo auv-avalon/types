@@ -39,6 +39,19 @@ struct Buoy
 	: image_x(x), image_y(y), image_radius(r), propability(1) {}
 };
 
+
+/**
+ * Simple structure for representing a gate detected in an image
+ */
+
+struct Gate
+{
+    /** dummy value */
+    int dummy;
+
+    Gate() {}
+};
+
 }} // namespace avalon::feature
 
 #endif // AVALON_BASE__FEATURE_H_
