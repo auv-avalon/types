@@ -15,7 +15,7 @@ struct DOFSelection
 
 }
 
-namespace motor_controller
+namespace avalon_motor_controller
 {
     struct PIDSettings
     {
