@@ -33,7 +33,7 @@ struct Buoy
         double propability;
 	
         /** real world coordinates of the buoy */
-	base::Vector3d world_coord;
+	base::Vector3d world_coord;	//x=vorne,y=links,z=oben
 
 	Buoy(int x, int y, int r)
 	: image_x(x), image_y(y), image_radius(r), propability(1) {}
