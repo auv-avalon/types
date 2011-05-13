@@ -35,6 +35,9 @@ struct Buoy
         /** real world coordinates of the buoy */
 	base::Vector3d world_coord;	//x=vorne,y=links,z=oben
 
+        Buoy()
+        : image_x(0), image_y(0), image_radius(0), propability(0) {}
+
 	Buoy(int x, int y, int r)
 	: image_x(x), image_y(y), image_radius(r), propability(1) {}
 };
