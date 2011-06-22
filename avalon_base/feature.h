@@ -33,7 +33,7 @@ struct Buoy
         double propability;
 
 	/** a variable used by the filter */
-	double validation;
+	double validation;  //double
 	
         /** real world coordinates of the buoy */
 	base::Vector3d world_coord;	//x=vorne,y=links,z=oben
@@ -43,6 +43,18 @@ struct Buoy
 
 	Buoy(int x, int y, int r)
 	: image_x(x), image_y(y), image_radius(r), propability(1), validation(0) {}
+
+        //derzeit falsch herum definiert um das sortieren im filter um zu drehen
+        inline friend bool operator< (const Buoy &a, const Buoy &b)
+        {
+            return a.validation<b.validation;
+        }
+        inline friend bool operator> (const Buoy &a, const Buoy& b)
+        {
+            return a.validation>b.validation;
+        }
+
+        
 };
 
 
