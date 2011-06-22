@@ -42,7 +42,7 @@ struct Buoy
         : image_x(0), image_y(0), image_radius(0), probability(0), validation(0) {}
 
 	Buoy(int x, int y, int r)
-	: image_x(x), image_y(y), image_radius(r), propability(1), validation(0) {}
+	: image_x(x), image_y(y), image_radius(r), probability(1), validation(0) {}
 
         //derzeit falsch herum definiert um das sortieren im filter um zu drehen
         inline friend bool operator< (const Buoy &a, const Buoy &b)
