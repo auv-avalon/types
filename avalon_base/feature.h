@@ -30,7 +30,7 @@ struct Buoy
 	int image_radius;
 	
         /** propability that this is a real buoy in image */
-        double propability;
+        double probability;
 
 	/** a variable used by the filter */
 	double validation;  //double
@@ -39,7 +39,7 @@ struct Buoy
 	base::Vector3d world_coord;	//x=vorne,y=links,z=oben
 
         Buoy()
-        : image_x(0), image_y(0), image_radius(0), propability(0), validation(0) {}
+        : image_x(0), image_y(0), image_radius(0), probability(0), validation(0) {}
 
 	Buoy(int x, int y, int r)
 	: image_x(x), image_y(y), image_radius(r), propability(1), validation(0) {}
@@ -54,7 +54,14 @@ struct Buoy
             return a.validation>b.validation;
         }
 
-        
+        static bool validityComparison(Buoy const& b0, Buoy const& b1)
+        {
+            return b0.validation < b1.validation;
+        }
+        static bool probabilityComparison(Buoy const& b0, Buoy const& b1)
+        {
+            return b0.probability < b1.probability;
+        }
 };
 
 
