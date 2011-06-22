@@ -43,6 +43,15 @@ struct Buoy
 
 	Buoy(int x, int y, int r)
 	: image_x(x), image_y(y), image_radius(r), probability(1), validation(0) {}
+
+        static bool validityComparison(Buoy const& b0, Buoy const& b1)
+        {
+            return b0.validation < b1.validation;
+        }
+        static bool probabilityComparison(Buoy const& b0, Buoy const& b1)
+        {
+            return b0.probability < b1.probability;
+        }
 };
 
 
