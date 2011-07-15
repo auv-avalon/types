@@ -9,6 +9,6 @@
     <license></license>
 
     <depend package="base/types" />
-    <rosdep name="eigen2" />
+    <rosdep name="eigen3" />
     <rosdep name="boost" />
 </package>
