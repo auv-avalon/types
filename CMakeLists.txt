@@ -18,8 +18,9 @@ endif (CXX_SUPPORTS_WALL)
 find_package(Boost REQUIRED)
 include_directories(${Boost_INCLUDE_DIR})
 
-find_package(Eigen2 REQUIRED)
-include_directories(${EIGEN2_INCLUDE_DIR})
+pkg_check_modules(Eigen3 REQUIRED "eigen3")
+include_directories(${Eigen3_INCLUDE_DIRS})
+link_directories(${Eigen3_LIBDIR})
 
 pkg_check_modules(BASE REQUIRED "base-types")
 include_directories(${BASE_INCLUDE_DIRS})
