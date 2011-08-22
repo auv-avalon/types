@@ -7,5 +7,5 @@ Version: 0.1
 Description: Common types for avalon modules
 Requires: base-types 
 Libs:
-Cflags: -I${includedir} -I@EIGEN3_INCLUDE_DIR@
+Cflags: -I${includedir}
 
