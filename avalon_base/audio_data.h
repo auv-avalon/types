@@ -7,8 +7,10 @@ namespace avalon {
 struct audio_data{
     std::vector<float> left;
     std::vector<float> right;
-    base::Time timeLeft;
-    base::Time timeRight;
+    double time;
+    //double timeRight;
+    //base::Time timeLeft;
+    //base::Time timeRight;
 };
 
 }
