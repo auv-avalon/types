@@ -92,6 +92,8 @@ struct WhiteLightSettings{
     double roi_height;
     int val_Binary_Threshold;
     int sat_Binary_Threshold;
+	WhiteLightSettings(double x,double y, double w, double h, int val, int sat)
+	: roi_X(x), roi_Y(y), roi_width(w), roi_height(h), val_Binary_Threshold(val), sat_Binary_Threshold(sat) {}
 };
 
 
