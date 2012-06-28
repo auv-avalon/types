@@ -6,13 +6,13 @@
 namespace avalon
 {
 
-struct audio_samples {
+struct AudioSamples {
     std::vector<float> left_channel;
     std::vector<float> right_channel;
     int sample_frequency;
     base::Time timestamp;
     
-    samples() : sample_frequency(0), timestamp(base::Time::now()) {};
+    AudioSamples() : sample_frequency(0), timestamp(base::Time::now()) {};
 
     bool isValid()
     {
