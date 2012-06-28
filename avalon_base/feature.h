@@ -11,7 +11,8 @@
 #define AVALON_BASE__FEATURE_H_
 
 #include <base/eigen.h>
-#include "base/time.h"
+#include <base/time.h>
+#include <base/float.h>
 
 namespace avalon {
 namespace feature {
@@ -94,6 +95,8 @@ struct WhiteLightSettings{
     int sat_Binary_Threshold;
 	WhiteLightSettings(double x,double y, double w, double h, int val, int sat)
 	: roi_X(x), roi_Y(y), roi_width(w), roi_height(h), val_Binary_Threshold(val), sat_Binary_Threshold(sat) {}
+	WhiteLightSettings()
+	: roi_X(base::unknown<double>()), roi_Y(base::unknown<double>()), roi_width(base::unknown<double>()), roi_height(base::unknown<double>()), val_Binary_Threshold(base::unknown<int>()), sat_Binary_Threshold(base::unknown<int>()) {}
 };
 
 
