@@ -85,6 +85,16 @@ struct Gate
     Gate() {}
 };
 
+struct WhiteLightSettings{
+    double roi_X;
+    double roi_Y;
+    double roi_width;
+    double roi_height;
+    int val_Binary_Threshold;
+    int sat_Binary_Threshold;
+};
+
+
 }} // namespace avalon::feature
 
 #endif // AVALON_BASE__FEATURE_H_
