@@ -6,6 +6,28 @@
 namespace avalon
 {
 
+struct PingerSamples {
+    int sample_frequency;
+    base::Time timestamp;
+    std::vector<float> data;
+    
+    PingerSamples() : sample_frequency(0), timestamp(base::Time::now()) {};
+    
+    bool isValid()
+    {
+        if(data.size() != 0 && sample_frequency > 0)
+            return true;
+        return false;
+    };
+    
+    void clear()
+    {
+        data.clear();
+        sample_frequency = 0;
+        timestamp = base::Time::now();
+    };
+};
+
 struct AudioSamples {
     std::vector<float> left_channel;
     std::vector<float> right_channel;
