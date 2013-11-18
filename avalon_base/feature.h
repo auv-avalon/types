@@ -38,16 +38,16 @@ struct Buoy
 	double validation;  //double
 
         /** timestamp */
-        base::Time stamp;
+        base::Time time;
 	
         /** real world coordinates of the buoy */
 	base::Vector3d world_coord;	//x=vorne,y=links,z=oben
 
         Buoy()
-        : image_x(0), image_y(0), image_radius(0), probability(0), validation(0), stamp(base::Time::now()) {}
+        : image_x(0), image_y(0), image_radius(0), probability(0), validation(0), time(base::Time::now()) {}
 
 	Buoy(int x, int y, int r)
-	: image_x(x), image_y(y), image_radius(r), probability(1), validation(0), stamp(base::Time::now()) {}
+	: image_x(x), image_y(y), image_radius(r), probability(1), validation(0), time(base::Time::now()) {}
 
         //derzeit falsch herum definiert um das sortieren im filter um zu drehen
         inline friend bool operator< (const Buoy &a, const Buoy &b)
@@ -61,7 +61,7 @@ struct Buoy
 
         static bool timeComparison(Buoy const& b0, Buoy const& b1)
         {
-            return b0.stamp > b1.stamp;
+            return b0.time > b1.time;
         }
         static bool validityComparison(Buoy const& b0, Buoy const& b1)
         {
